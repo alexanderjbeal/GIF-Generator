@@ -30,7 +30,7 @@ $(document).ready(function() {
     // LISTENS FOR BUTTON EVEN --- RENDERS BUTTONS ---ALLOWS ADDITIONAL BUTTONS TO BE MADE------
 
     // Initial array of animals
-    var animals = ["Dogs", "Hippo", "Giraffe", "Snail", "Orca", "Elephant"];
+    var animals = ["Godzilla", "Golden Retreivers", "Michael Jordan", "Shark Week", "Blockchain", "School"];
     console.log(animals);
     // displayGiphy function re-renders the HTML to display the appropriate content
     function displayGiphy() {
