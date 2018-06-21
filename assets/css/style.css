@@ -1,0 +1,97 @@
+body {
+    font-family: Heebo, sans-serif;
+}
+#wrapper {
+    margin-top: 40px;
+}
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 15px;
+}
+
+/* CLEAR FIX */
+#images:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+#button, #images {
+      margin: 10px;
+      border-radius: 50px;
+}
+
+  #animal-form {
+      text-align: center;
+  }
+ 
+  #button-container {
+      width: 90%;
+      margin: 0 auto;
+  }
+
+ .gif-button {
+      border-radius: 50px;
+      color: black;
+      padding: 12px;
+      width: 14%;
+      border: 2px solid black;
+  }
+
+  .gif-button:hover {
+      background: black;
+      color: white;
+  }
+
+  /* INPUT */
+  .button-form-container {
+    margin-top: 80px;
+    width: 100%;
+}
+  #animal-input {
+    padding: 20px;
+    font-size: 20px;
+}
+.submit-button {
+    border-radius: 8px;
+    color: black;
+    padding: 21px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+  /* IMAGES */
+  .rating {
+      font-family: Heebo, sans-serif;
+      text-transform: uppercase;
+      font-size: 12px;
+      text-align: center;
+  }
+  #images {
+      width: 90%;
+      margin: 0 auto;
+  }
+
+  .animal_gif {
+      float: left;
+      overflow: auto;
+      margin: 10px;
+  }
+  
+  label {
+    text-align: center;
+  }
+
+  @media screen and (max-width:540px){
+
+    .gif-button {
+        border-radius: 50px;
+        color: black;
+        padding: 12px;
+        width: 100%;
+        border: 2px solid black;
+    }
+
+  }
