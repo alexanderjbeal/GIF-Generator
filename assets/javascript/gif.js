@@ -1,12 +1,6 @@
 $(document).ready(function() {
 
-
-    function displayArcher(){
-        $("#images").html('<img id="stupidTest" height="100" width="100" src="https://vignette4.wikia.nocookie.net/archer/images/f/fb/Cheryl_Tunt01.png/revision/latest/scale-to-width-down/1000?cb=20151013030824" state="still" animate="https://vignette2.wikia.nocookie.net/archer/images/3/3f/Sterling_Archer_Standing_POSE.png/revision/latest?cb=20151123090437" still="https://vignette4.wikia.nocookie.net/archer/images/f/fb/Cheryl_Tunt01.png/revision/latest/scale-to-width-down/1000?cb=20151013030824">');
-        console.log("display archer fucntion fired");
-
-    }
-    //----------Function to Pause Giphs ----------
+    // Function to pause GIFs
     $("#stupidTest").click(function () {
         console.log("stupidtest click function");
         // $("#images").empty();
@@ -27,7 +21,7 @@ $(document).ready(function() {
         }
     });
 
-    // LISTENS FOR BUTTON EVEN --- RENDERS BUTTONS ---ALLOWS ADDITIONAL BUTTONS TO BE MADE------
+    // Listens for button event - renders button - allows additional buttons to be made
 
     // Initial array of animals
     var animals = ["Godzilla", "Golden Retreivers", "Michael Jordan", "Shark Week", "Blockchain", "School"];
@@ -38,14 +32,10 @@ $(document).ready(function() {
         //----------This empties the images DIV-----------
         $("#images").empty();
 
-
         var animal = $(this).attr("data-name");
         
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + animal + "&api_key=dc6zaTOxFJmzC&limit=10";
         console.log(queryURL);
-
-        //------EXAMPLE URL FROM GIPHY ----
-        // http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=dc6zaTOxFJmzC&limit=5
 
         // Creating an AJAX call for the specific animal button being clicked
         $.ajax({
@@ -65,11 +55,10 @@ $(document).ready(function() {
                 console.log(response.data[i].images.original_still.url);
 
                 // Creating an element to have the rating displayed
-                var pOne = $('<p class="rating">').html("Rating: " + rating);
+                var rated = $('<p class="rating">').html("Rating: " + rating);
 
                 // Displaying the rating
-                animalDiv.append(pOne);
-                // $("#images").html(pOne);
+                animalDiv.append(rated);
 
                 // Retrieving the URL for the image
                 var imgURL = response.data[i].images.fixed_height_still.url;
@@ -99,10 +88,8 @@ $(document).ready(function() {
             }
         });
     }
-    
 
-
-    // ----------Function for displaying giph buttons----------
+    // Function for displaying gif buttons
     function renderButtons() {
 
         // Deleting the animals prior to adding new giphy
@@ -129,7 +116,7 @@ $(document).ready(function() {
     }
 
     // ----------This function handles events where an animal button is clicked----------
-    $("#addAnimal").on("click", function (event) {
+    $("#generate").on("click", function (event) {
         
         event.preventDefault();
         // This line grabs the input from the textbox
