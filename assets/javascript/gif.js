@@ -23,8 +23,8 @@ $(document).ready(function() {
     // Listens for button event - renders button - allows additional buttons to be made
 
     // Initial array of animals
-    var animals = ["Godzilla", "Golden Retreivers", "Michael Jordan", "Shark Week", "Blockchain", "School"];
-    console.log(animals);
+    var cool = ["Godzilla", "Golden Retreivers", "Michael Jordan", "Shark Week", "Blockchain", "School"];
+    console.log(cool);
     // displayGiphy function re-renders the HTML to display the appropriate content
     function displayGiphy() {
 
@@ -45,7 +45,7 @@ $(document).ready(function() {
             //------ Loops for 10 imgs ------
             for (var i = 0; i < 10; i++) {
                 // Creating a div to hold the animals
-                var animalDiv = $("<div class='animal_gif'>");
+                var coolDiv = $("<div class='gif-image'>");
 
                 // Storing the rating data
                 var rating = response.data[i].rating;
@@ -57,7 +57,7 @@ $(document).ready(function() {
                 var rated = $('<p class="rating">').html("Rating: " + rating);
 
                 // Displaying the rating
-                animalDiv.append(rated);
+                coolDiv.append(rated);
 
                 // Retrieving the URL for the image
                 var imgURL = response.data[i].images.fixed_height_still.url;
@@ -75,11 +75,11 @@ $(document).ready(function() {
                 })
 
                 // Appending the image
-                 animalDiv.append(image);
+                 coolDiv.append(image);
                 //$("#images").html(image);
 
                 // Putting the entire image above the previous giphy image
-                $("#images").append(animalDiv);
+                $("#images").append(coolDiv);
 
                 // ---PUTTING IMGS AT BOTTM OF PAGE ------
                 // $("#ryanG").arrt();
@@ -96,7 +96,7 @@ $(document).ready(function() {
         $("#button-container").empty();
 
         // Looping through the array of animals
-        for (var i = 0; i < animals.length; i++) {
+        for (var i = 0; i < cool.length; i++) {
 
             // Then dynamicaly generating buttons for each animal in the array
             // This code $("<button>") is all jQuery needs to create the beginning and end tag. (<button></button>)
@@ -104,11 +104,11 @@ $(document).ready(function() {
             // Adding a class of animals to our button
             a.addClass("animals gif-button");
             // Adding a data-attribute
-            a.attr("data-name", animals[i]);
+            a.attr("data-name", cool[i]);
             // Adding a data-attribute
             a.attr("id", "button");
             // Providing the initial button text
-            a.text(animals[i]);
+            a.text(cool[i]);
             // Adding the button to the buttons-view div
             $("#button-container").append(a);
         }
@@ -119,10 +119,10 @@ $(document).ready(function() {
         
         event.preventDefault();
         // This line grabs the input from the textbox
-        var newAnimal = $("#gif-input").val().trim();
+        var newCool = $("#gif-input").val().trim();
 
         // Adding animal from the textbox to our array
-        animals.push(newAnimal);
+        cool.push(newCool);
 
         // Calling renderButtons which handles the processing of our animals array
         renderButtons();
