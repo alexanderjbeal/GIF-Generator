@@ -77,13 +77,20 @@ h1 {
       width: 33.3%;
       float: left;
   }
-
-
   .gif-image {
+      width: 30%;
       float: left;
       overflow: auto;
+      background: lightgray;
       margin: 10px;
+      padding: 10px;
+      text-align: center;
   }
+ .giph-image {
+     margin: 0 auto;
+     text-align: center;
+     align-content: center;
+ }
   
   label {
     text-align: center;
