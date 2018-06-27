@@ -73,6 +73,10 @@ h1 {
       width: 90%;
       margin: 0 auto;
   }
+  .image-container {
+      width: 33.3%;
+      float: left;
+  }
 
 
   .gif-image {

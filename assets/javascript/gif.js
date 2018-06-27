@@ -76,13 +76,9 @@ $(document).ready(function() {
 
                 // Appending the image
                  coolDiv.append(image);
-                //$("#images").html(image);
 
                 // Putting the entire image above the previous giphy image
                 $("#images").append(coolDiv);
-
-                // ---PUTTING IMGS AT BOTTM OF PAGE ------
-                // $("#ryanG").arrt();
 
             }
         });
