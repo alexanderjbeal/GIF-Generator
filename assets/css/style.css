@@ -23,7 +23,7 @@ h1 {
       border-radius: 50px;
 }
 
-  #animal-form {
+  #gif-form {
       text-align: center;
   }
  
@@ -50,7 +50,7 @@ h1 {
     margin-top: 80px;
     width: 100%;
 }
-  #animal-input {
+  #gif-input {
     padding: 20px;
     font-size: 20px;
 }

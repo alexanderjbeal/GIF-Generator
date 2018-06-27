@@ -1,8 +1,7 @@
 $(document).ready(function() {
 
     // Function to pause GIFs
-    $("#stupidTest").click(function () {
-        console.log("stupidtest click function");
+    $("#pauseGif").click(function () {
         // $("#images").empty();
         // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
         var state = $(this).attr("state");
@@ -120,14 +119,14 @@ $(document).ready(function() {
         
         event.preventDefault();
         // This line grabs the input from the textbox
-        var newAnimal = $("#animal-input").val().trim();
+        var newAnimal = $("#gif-input").val().trim();
 
         // Adding animal from the textbox to our array
         animals.push(newAnimal);
 
         // Calling renderButtons which handles the processing of our animals array
         renderButtons();
-        $("#animal-input").val('');
+        $("#gif-input").val('');
     });
 
     // Adding a click event listener to all elements with a class of "animals"
@@ -139,7 +138,6 @@ $(document).ready(function() {
    
     $(document).on("click", ".giph-image", function (){
         console.log("img.giph clickfunction");
-        // $("#images").empty();
         // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
         var state = $(this).attr("state");
         console.log(state);
