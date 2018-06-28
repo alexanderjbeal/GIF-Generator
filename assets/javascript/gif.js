@@ -23,7 +23,7 @@ $(document).ready(function() {
     // Listens for button event - renders button - allows additional buttons to be made
 
     // Initial array of animals
-    var cool = ["Godzilla", "Golden Retreivers", "Michael Jordan", "Shark Week", "Blockchain", "School"];
+    var cool = ["Godzilla", "Golden Retreivers", "Michael Jordan", "Shark Week", "Blockchain"];
     console.log(cool);
     // displayGiphy function re-renders the HTML to display the appropriate content
     function displayGiphy() {

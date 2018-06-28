@@ -4,28 +4,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>GIF GENERATOR</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <!-- STYLE -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:900" rel="stylesheet">
 </head>
 
 <body>
   <div id="wrapper">
-    <div id="instructions">
-      <h1>GIF Generator</h1>
-      <h2>What are you waiting for?</h2>
-      <p>Simply press one of the buttons. Want to see other GIF's? Make your own using the form below.</p>
-    </div>
+
+      <div class="jumbotron jumbotron-fluid">
+          <div class="container">
+
+              <div id="instructions">
+                  <h1>GIF Generator</h1>
+                  <h2>What are you waiting for?</h2>
+                  <p>Simply, press a button. Want to see another category? Create your own using the form below.</p>
+
+                  <div class="button-form-container">
+                      <form id="gif-form">
+                        <label for="gif-input"></label>
+                        <input type="text" id="gif-input">
+                
+                        <input id="generate" type="submit" value="Submit" class="submit-button">
+                      </form>
+                  </div>
+                  
+              </div>
+
+          </div>
+        </div>
+
+    
     <div id="button-container"></div>
 
-    <div class="button-form-container">
-      <form id="gif-form">
-        <label for="gif-input"></label>
-        <input type="text" id="gif-input">
 
-        <input id="generate" type="submit" value="Submit" class="submit-button">
-      </form>
-  </div>
 
     <!-- GIF -->
     <div id="images"> 
