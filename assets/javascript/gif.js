@@ -98,7 +98,7 @@ $(document).ready(function() {
             // This code $("<button>") is all jQuery needs to create the beginning and end tag. (<button></button>)
             var a = $("<button>");
             // Adding a class of animals to our button
-            a.addClass("animals gif-button");
+            a.addClass("cool gif-button");
             // Adding a data-attribute
             a.attr("data-name", cool[i]);
             // Adding a data-attribute
@@ -126,7 +126,7 @@ $(document).ready(function() {
     });
 
     // Adding a click event listener to all elements with a class of "animals"
-    $(document).on("click", ".animals", displayGiphy);
+    $(document).on("click", ".cool", displayGiphy);
 
     // Calling the renderButtons function to display the intial buttons
     renderButtons();
