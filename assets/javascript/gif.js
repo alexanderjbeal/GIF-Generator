@@ -31,12 +31,12 @@ $(document).ready(function() {
         //----------This empties the images DIV-----------
         $("#images").empty();
 
-        var animal = $(this).attr("data-name");
+        var keyword = $(this).attr("data-name");
         
-        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + animal + "&api_key=dc6zaTOxFJmzC&limit=10";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + keyword + "&api_key=dc6zaTOxFJmzC&limit=10";
         console.log(queryURL);
 
-        // Creating an AJAX call for the specific animal button being clicked
+        // Creating an AJAX call for the specific GIF button being clicked
         $.ajax({
             url: queryURL,
             method: "GET"
@@ -94,7 +94,7 @@ $(document).ready(function() {
         // Looping through the array of animals
         for (var i = 0; i < cool.length; i++) {
 
-            // Then dynamicaly generating buttons for each animal in the array
+            // Then dynamicaly generating buttons for each item in the array
             // This code $("<button>") is all jQuery needs to create the beginning and end tag. (<button></button>)
             var a = $("<button>");
             // Adding a class of animals to our button
@@ -110,22 +110,22 @@ $(document).ready(function() {
         }
     }
 
-    // ----------This function handles events where an animal button is clicked----------
+    // This function handles events when a button is clicked
     $("#generate").on("click", function (event) {
         
         event.preventDefault();
         // This line grabs the input from the textbox
         var newCool = $("#gif-input").val().trim();
 
-        // Adding animal from the textbox to our array
+        // Adding keyword from the textbox to our array
         cool.push(newCool);
 
-        // Calling renderButtons which handles the processing of our animals array
+        // Calling renderButtons which handles the processing of the array
         renderButtons();
         $("#gif-input").val('');
     });
 
-    // Adding a click event listener to all elements with a class of "animals"
+    // Adding a click event listener to all elements with a class of "cool"
     $(document).on("click", ".cool", displayGiphy);
 
     // Calling the renderButtons function to display the intial buttons
