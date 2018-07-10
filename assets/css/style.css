@@ -32,7 +32,8 @@ p {
 }
 
 .jumbotron {
-    background: #007CC2;
+    /* background: #007CC2; */
+    background: linear-gradient(323deg, #009cff, #005f9c, #013e66);
 }
 
 /* CLEAR FIX */
